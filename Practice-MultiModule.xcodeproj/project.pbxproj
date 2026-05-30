@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C451B572FCB2B9E005BD005 /* MyLibraryA in Frameworks */ = {isa = PBXBuildFile; productRef = 4C451B562FCB2B9E005BD005 /* MyLibraryA */; };
+		4C451B682FCB2FF0005BD005 /* MyLibraryB in Frameworks */ = {isa = PBXBuildFile; productRef = 4C451B672FCB2FF0005BD005 /* MyLibraryB */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C451B572FCB2B9E005BD005 /* MyLibraryA in Frameworks */,
+				4C451B682FCB2FF0005BD005 /* MyLibraryB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +83,7 @@
 			name = "Practice-MultiModule";
 			packageProductDependencies = (
 				4C451B562FCB2B9E005BD005 /* MyLibraryA */,
+				4C451B672FCB2FF0005BD005 /* MyLibraryB */,
 			);
 			productName = "Practice-MultiModule";
 			productReference = 4C88FFC82FCAFED2005CF936 /* Practice-MultiModule.app */;
@@ -110,6 +113,9 @@
 			);
 			mainGroup = 4C88FFBF2FCAFED2005CF936;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4C451B662FCB2FF0005BD005 /* XCLocalSwiftPackageReference "MyLibraryB" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4C88FFC92FCAFED2005CF936 /* Products */;
 			projectDirPath = "";
@@ -372,10 +378,21 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		4C451B662FCB2FF0005BD005 /* XCLocalSwiftPackageReference "MyLibraryB" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = MyLibraryB;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		4C451B562FCB2B9E005BD005 /* MyLibraryA */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MyLibraryA;
+		};
+		4C451B672FCB2FF0005BD005 /* MyLibraryB */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MyLibraryB;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
