@@ -6,7 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4C451B572FCB2B9E005BD005 /* MyLibraryA in Frameworks */ = {isa = PBXBuildFile; productRef = 4C451B562FCB2B9E005BD005 /* MyLibraryA */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		4C451B462FCB2AEA005BD005 /* MyLibraryA */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MyLibraryA; sourceTree = "<group>"; };
 		4C88FFC82FCAFED2005CF936 /* Practice-MultiModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Practice-MultiModule.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -23,16 +28,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C451B572FCB2B9E005BD005 /* MyLibraryA in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C451B552FCB2B9E005BD005 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4C88FFBF2FCAFED2005CF936 = {
 			isa = PBXGroup;
 			children = (
+				4C451B462FCB2AEA005BD005 /* MyLibraryA */,
 				4C88FFCA2FCAFED2005CF936 /* Practice-MultiModule */,
+				4C451B552FCB2B9E005BD005 /* Frameworks */,
 				4C88FFC92FCAFED2005CF936 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +80,7 @@
 			);
 			name = "Practice-MultiModule";
 			packageProductDependencies = (
+				4C451B562FCB2B9E005BD005 /* MyLibraryA */,
 			);
 			productName = "Practice-MultiModule";
 			productReference = 4C88FFC82FCAFED2005CF936 /* Practice-MultiModule.app */;
@@ -355,6 +371,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4C451B562FCB2B9E005BD005 /* MyLibraryA */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MyLibraryA;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4C88FFC02FCAFED2005CF936 /* Project object */;
 }
