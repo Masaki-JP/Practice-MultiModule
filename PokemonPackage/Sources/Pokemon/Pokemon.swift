@@ -1,5 +1,6 @@
 public import Foundation
 
+nonisolated
 public struct Pokemon: Hashable, Decodable, Identifiable, Sendable {
     public let id: Int
     public let name: String

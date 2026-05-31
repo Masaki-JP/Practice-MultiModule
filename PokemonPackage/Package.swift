@@ -19,6 +19,7 @@ let package = Package(
         .target(
             name: "Pokemon",
             swiftSettings: [
+                .defaultIsolation(MainActor.self),
                 .enableUpcomingFeature("ExistentialAny"),
                 .enableUpcomingFeature("InternalImportsByDefault"),
                 .enableUpcomingFeature("MemberImportVisibility"),
@@ -31,6 +32,7 @@ let package = Package(
             dependencies: ["Pokemon"],
             path: "Sources/PokemonDetailViewBuilder/Interface",
             swiftSettings: [
+                .defaultIsolation(MainActor.self),
                 .enableUpcomingFeature("ExistentialAny"),
                 .enableUpcomingFeature("InternalImportsByDefault"),
                 .enableUpcomingFeature("MemberImportVisibility"),
@@ -43,6 +45,7 @@ let package = Package(
             dependencies: ["PokemonDetailViewBuilderInterface", "Pokemon"],
             path: "Sources/PokemonDetailViewBuilder/Implementation",
             swiftSettings: [
+                .defaultIsolation(MainActor.self),
                 .enableUpcomingFeature("ExistentialAny"),
                 .enableUpcomingFeature("InternalImportsByDefault"),
                 .enableUpcomingFeature("MemberImportVisibility"),
@@ -54,6 +57,7 @@ let package = Package(
             name: "PokemonCard",
             dependencies: ["Pokemon"],
             swiftSettings: [
+                .defaultIsolation(MainActor.self),
                 .enableUpcomingFeature("ExistentialAny"),
                 .enableUpcomingFeature("InternalImportsByDefault"),
                 .enableUpcomingFeature("MemberImportVisibility"),
@@ -65,6 +69,7 @@ let package = Package(
             name: "PokedexView",
             dependencies: ["Pokemon", "PokemonDetailViewBuilderInterface", "PokemonCard"],
             swiftSettings: [
+                .defaultIsolation(MainActor.self),
                 .enableUpcomingFeature("ExistentialAny"),
                 .enableUpcomingFeature("InternalImportsByDefault"),
                 .enableUpcomingFeature("MemberImportVisibility"),
@@ -76,6 +81,7 @@ let package = Package(
             name: "RootView",
             dependencies: ["PokedexView", "PokemonDetailViewBuilder", "Pokemon"],
             swiftSettings: [
+                .defaultIsolation(MainActor.self),
                 .enableUpcomingFeature("ExistentialAny"),
                 .enableUpcomingFeature("InternalImportsByDefault"),
                 .enableUpcomingFeature("MemberImportVisibility"),
