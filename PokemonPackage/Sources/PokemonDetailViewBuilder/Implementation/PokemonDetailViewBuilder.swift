@@ -1,13 +1,22 @@
 public import SwiftUI
 public import Pokemon
+public import PokemonDetailViewBuilderInterface
 
-public  struct PokemonDetailView: View {
+public struct PokemonDetailViewBuilder: PokemonDetailViewBuilderProtocol {
+    public init() {}
+    
+    public func build(_ pokemon: Pokemon) -> some View {
+        PokemonDetailView(pokemon)
+    }
+}
+
+fileprivate struct PokemonDetailView: View {
     public init(_ pokemon: Pokemon) {
         self.pokemon = pokemon
     }
-
+    
     private let pokemon: Pokemon
-
+    
     public var body: some View {
         VStack(alignment: .leading) {
             Text("PokemonDetailView")

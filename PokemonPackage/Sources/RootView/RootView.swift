@@ -1,5 +1,6 @@
 @_exported import SwiftUI
 import PokedexView
+import PokemonDetailViewBuilder
 import Pokemon
 
 public struct RootView: View {
@@ -8,7 +9,7 @@ public struct RootView: View {
     public init() {}
     
     public var body: some View {
-        PokedexView(pokemons)
+        PokedexView(pokemons, pokemonDetailViewBuilder: PokemonDetailViewBuilder())
             .task {
                 pokemons = await fetchPokemons()
             }

@@ -26,10 +26,10 @@ let package = Package(
                 .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
             ],
         ),
-        
         .target(
-            name: "PokemonDetailView",
+            name: "PokemonDetailViewBuilderInterface",
             dependencies: ["Pokemon"],
+            path: "Sources/PokemonDetailViewBuilder/Interface",
             swiftSettings: [
                 .enableUpcomingFeature("ExistentialAny"),
                 .enableUpcomingFeature("InternalImportsByDefault"),
@@ -38,7 +38,18 @@ let package = Package(
                 .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
             ],
         ),
-        
+        .target(
+            name: "PokemonDetailViewBuilder",
+            dependencies: ["PokemonDetailViewBuilderInterface", "Pokemon"],
+            path: "Sources/PokemonDetailViewBuilder/Implementation",
+            swiftSettings: [
+                .enableUpcomingFeature("ExistentialAny"),
+                .enableUpcomingFeature("InternalImportsByDefault"),
+                .enableUpcomingFeature("MemberImportVisibility"),
+                .enableUpcomingFeature("InferIsolatedConformances"),
+                .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
+            ],
+        ),
         .target(
             name: "PokemonCard",
             dependencies: ["Pokemon"],
@@ -50,10 +61,9 @@ let package = Package(
                 .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
             ],
         ),
-        
         .target(
             name: "PokedexView",
-            dependencies: ["Pokemon", "PokemonDetailView", "PokemonCard"],
+            dependencies: ["Pokemon", "PokemonDetailViewBuilderInterface", "PokemonCard"],
             swiftSettings: [
                 .enableUpcomingFeature("ExistentialAny"),
                 .enableUpcomingFeature("InternalImportsByDefault"),
@@ -62,10 +72,9 @@ let package = Package(
                 .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
             ],
         ),
-        
         .target(
             name: "RootView",
-            dependencies: ["PokedexView", "Pokemon"],
+            dependencies: ["PokedexView", "PokemonDetailViewBuilder", "Pokemon"],
             swiftSettings: [
                 .enableUpcomingFeature("ExistentialAny"),
                 .enableUpcomingFeature("InternalImportsByDefault"),
@@ -74,7 +83,6 @@ let package = Package(
                 .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
             ],
         ),
-
     ],
     swiftLanguageModes: [.v6]
 )
