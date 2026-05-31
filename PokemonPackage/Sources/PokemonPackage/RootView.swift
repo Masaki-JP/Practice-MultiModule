@@ -1,15 +1,17 @@
-import SwiftUI
+@_exported import SwiftUI
 
-struct RootView: View {
+public struct RootView: View {
     @State private var pokemons: [Pokemon] = []
-
-    var body: some View {
+    
+    public init() {}
+    
+    public var body: some View {
         PokedexView(pokemons)
             .task {
                 pokemons = await fetchPokemons()
             }
     }
-
+    
     @concurrent
     nonisolated func fetchPokemons() async -> [Pokemon] {
         await withTaskGroup { group in
@@ -18,7 +20,7 @@ struct RootView: View {
                     await Pokemon(id: id)!
                 }
             }
-
+            
             return await group.reduce(into: [Pokemon]()) { pokemons, pokemon in
                 pokemons.append(pokemon)
             }.sorted { lhs, rhs in

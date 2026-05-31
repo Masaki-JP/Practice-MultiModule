@@ -1,4 +1,4 @@
-import SwiftUI
+import PokemonPackage
 
 @main
 struct Practice_MultiModuleApp: App {
