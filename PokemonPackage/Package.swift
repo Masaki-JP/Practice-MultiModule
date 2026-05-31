@@ -24,7 +24,6 @@ let package = Package(
                 .enableUpcomingFeature("MemberImportVisibility"),
                 .enableUpcomingFeature("InferIsolatedConformances"),
                 .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
-                .enableUpcomingFeature("ImmutableWeakCaptures"),
             ],
         ),
 
