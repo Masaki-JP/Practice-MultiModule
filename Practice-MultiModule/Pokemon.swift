@@ -1,6 +1,4 @@
 import Foundation
-import MyLibraryA
-import MyLibraryB
 
 struct Pokemon: Hashable, Decodable, Identifiable, Sendable {
     let id: Int
@@ -12,9 +10,6 @@ struct Pokemon: Hashable, Decodable, Identifiable, Sendable {
     }
 
     fileprivate init(id: Int, name: String, sprites: Sprites) {
-        actionA()
-        actionB()
-
         self.id = id
         self.name = name
         self.sprites = sprites
