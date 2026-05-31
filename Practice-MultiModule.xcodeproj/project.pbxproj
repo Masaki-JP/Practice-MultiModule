@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4C451B572FCB2B9E005BD005 /* MyLibraryA in Frameworks */ = {isa = PBXBuildFile; productRef = 4C451B562FCB2B9E005BD005 /* MyLibraryA */; };
 		4C451B682FCB2FF0005BD005 /* MyLibraryB in Frameworks */ = {isa = PBXBuildFile; productRef = 4C451B672FCB2FF0005BD005 /* MyLibraryB */; };
-		4C451B9D2FCC1A4D005BD005 /* PokemonPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 4C451B9C2FCC1A4D005BD005 /* PokemonPackage */; };
+		4C451BBB2FCC60EF005BD005 /* PokemonLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 4C451BBA2FCC60EF005BD005 /* PokemonLibrary */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +31,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C451BBB2FCC60EF005BD005 /* PokemonLibrary in Frameworks */,
 				4C451B572FCB2B9E005BD005 /* MyLibraryA in Frameworks */,
 				4C451B682FCB2FF0005BD005 /* MyLibraryB in Frameworks */,
-				4C451B9D2FCC1A4D005BD005 /* PokemonPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 			packageProductDependencies = (
 				4C451B562FCB2B9E005BD005 /* MyLibraryA */,
 				4C451B672FCB2FF0005BD005 /* MyLibraryB */,
-				4C451B9C2FCC1A4D005BD005 /* PokemonPackage */,
+				4C451BBA2FCC60EF005BD005 /* PokemonLibrary */,
 			);
 			productName = "Practice-MultiModule";
 			productReference = 4C88FFC82FCAFED2005CF936 /* Practice-MultiModule.app */;
@@ -405,9 +405,9 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = MyLibraryB;
 		};
-		4C451B9C2FCC1A4D005BD005 /* PokemonPackage */ = {
+		4C451BBA2FCC60EF005BD005 /* PokemonLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = PokemonPackage;
+			productName = PokemonLibrary;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
