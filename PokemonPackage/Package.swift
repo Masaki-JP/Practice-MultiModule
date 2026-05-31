@@ -3,6 +3,15 @@
 
 import PackageDescription
 
+let swiftSettings: [SwiftSetting] = [
+    .defaultIsolation(MainActor.self),
+    .enableUpcomingFeature("ExistentialAny"),
+    .enableUpcomingFeature("InternalImportsByDefault"),
+    .enableUpcomingFeature("MemberImportVisibility"),
+    .enableUpcomingFeature("InferIsolatedConformances"),
+    .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
+]
+
 let package = Package(
     name: "PokemonPackage",
     platforms: [.iOS(.v26)],
@@ -18,76 +27,34 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "Pokemon",
-            swiftSettings: [
-                .defaultIsolation(MainActor.self),
-                .enableUpcomingFeature("ExistentialAny"),
-                .enableUpcomingFeature("InternalImportsByDefault"),
-                .enableUpcomingFeature("MemberImportVisibility"),
-                .enableUpcomingFeature("InferIsolatedConformances"),
-                .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
-            ],
+            swiftSettings: swiftSettings,
         ),
         .target(
             name: "PokemonDetailViewBuilderInterface",
             dependencies: ["Pokemon"],
             path: "Sources/PokemonDetailViewBuilder/Interface",
-            swiftSettings: [
-                .defaultIsolation(MainActor.self),
-                .enableUpcomingFeature("ExistentialAny"),
-                .enableUpcomingFeature("InternalImportsByDefault"),
-                .enableUpcomingFeature("MemberImportVisibility"),
-                .enableUpcomingFeature("InferIsolatedConformances"),
-                .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
-            ],
+            swiftSettings: swiftSettings,
         ),
         .target(
             name: "PokemonDetailViewBuilder",
             dependencies: ["PokemonDetailViewBuilderInterface", "Pokemon"],
             path: "Sources/PokemonDetailViewBuilder/Implementation",
-            swiftSettings: [
-                .defaultIsolation(MainActor.self),
-                .enableUpcomingFeature("ExistentialAny"),
-                .enableUpcomingFeature("InternalImportsByDefault"),
-                .enableUpcomingFeature("MemberImportVisibility"),
-                .enableUpcomingFeature("InferIsolatedConformances"),
-                .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
-            ],
+            swiftSettings: swiftSettings,
         ),
         .target(
             name: "PokemonCard",
             dependencies: ["Pokemon"],
-            swiftSettings: [
-                .defaultIsolation(MainActor.self),
-                .enableUpcomingFeature("ExistentialAny"),
-                .enableUpcomingFeature("InternalImportsByDefault"),
-                .enableUpcomingFeature("MemberImportVisibility"),
-                .enableUpcomingFeature("InferIsolatedConformances"),
-                .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
-            ],
+            swiftSettings: swiftSettings,
         ),
         .target(
             name: "PokedexView",
             dependencies: ["Pokemon", "PokemonDetailViewBuilderInterface", "PokemonCard"],
-            swiftSettings: [
-                .defaultIsolation(MainActor.self),
-                .enableUpcomingFeature("ExistentialAny"),
-                .enableUpcomingFeature("InternalImportsByDefault"),
-                .enableUpcomingFeature("MemberImportVisibility"),
-                .enableUpcomingFeature("InferIsolatedConformances"),
-                .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
-            ],
+            swiftSettings: swiftSettings,
         ),
         .target(
             name: "RootView",
             dependencies: ["PokedexView", "PokemonDetailViewBuilder", "Pokemon"],
-            swiftSettings: [
-                .defaultIsolation(MainActor.self),
-                .enableUpcomingFeature("ExistentialAny"),
-                .enableUpcomingFeature("InternalImportsByDefault"),
-                .enableUpcomingFeature("MemberImportVisibility"),
-                .enableUpcomingFeature("InferIsolatedConformances"),
-                .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
-            ],
+            swiftSettings: swiftSettings,
         ),
     ],
     swiftLanguageModes: [.v6]
