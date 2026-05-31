@@ -6,7 +6,7 @@ public struct Pokemon: Hashable, Decodable, Identifiable, Sendable {
     public let name: String
     public let sprites: Sprites
 
-    public  struct Sprites: Hashable, Decodable, Sendable {
+    public struct Sprites: Hashable, Decodable, Sendable {
         public let front_default: URL
     }
 
@@ -32,5 +32,5 @@ public struct Pokemon: Hashable, Decodable, Identifiable, Sendable {
 }
 
 extension Pokemon {
-    public  static let sample: Self = .init(id: 1, name: "bulbasaur", sprites: .init(front_default: .init(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png")!))
+    public static let sample: Self = .init(id: 1, name: "bulbasaur", sprites: .init(front_default: .init(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png")!))
 }

@@ -8,7 +8,7 @@ public struct PokemonCard: View {
         self.pokemon = pokemon
     }
 
-    public  var body: some View {
+    public var body: some View {
         AsyncImage(url: pokemon.sprites.front_default) { imagePhase in
             switch imagePhase {
             case .empty:
