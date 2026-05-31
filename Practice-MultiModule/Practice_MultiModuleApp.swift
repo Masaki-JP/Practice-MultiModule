@@ -1,4 +1,4 @@
-import PokemonPackage
+import RootView
 
 @main
 struct Practice_MultiModuleApp: App {

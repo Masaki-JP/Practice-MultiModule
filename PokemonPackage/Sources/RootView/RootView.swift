@@ -1,4 +1,6 @@
 @_exported import SwiftUI
+import PokedexView
+import Pokemon
 
 public struct RootView: View {
     @State private var pokemons: [Pokemon] = []

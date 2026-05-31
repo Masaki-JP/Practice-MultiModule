@@ -1,13 +1,16 @@
-import SwiftUI
+public import SwiftUI
+import PokemonDetailView
+import PokemonCard
+public import Pokemon
 
-struct PokedexView: View {
-    init(_ pokemons: [Pokemon]) {
+public struct PokedexView: View {
+    public  init(_ pokemons: [Pokemon]) {
         self.pokemons = pokemons
     }
 
     private let pokemons: [Pokemon]
 
-    var body: some View {
+    public  var body: some View {
         NavigationStack {
             ScrollView {
                 LazyVGrid(columns: [.init(.adaptive(minimum: 100, maximum: 150))]) {

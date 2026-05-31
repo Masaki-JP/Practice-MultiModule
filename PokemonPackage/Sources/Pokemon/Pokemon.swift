@@ -1,12 +1,12 @@
-import Foundation
+public import Foundation
 
-struct Pokemon: Hashable, Decodable, Identifiable, Sendable {
-    let id: Int
-    let name: String
-    let sprites: Sprites
+public struct Pokemon: Hashable, Decodable, Identifiable, Sendable {
+    public let id: Int
+    public let name: String
+    public let sprites: Sprites
 
-    struct Sprites: Hashable, Decodable, Sendable {
-        let front_default: URL
+    public  struct Sprites: Hashable, Decodable, Sendable {
+        public let front_default: URL
     }
 
     fileprivate init(id: Int, name: String, sprites: Sprites) {
@@ -15,7 +15,7 @@ struct Pokemon: Hashable, Decodable, Identifiable, Sendable {
         self.sprites = sprites
     }
 
-    init?(id: Int) async {
+    public init?(id: Int) async {
         guard
             let url = URL(string: "https://pokeapi.co/api/v2/pokemon/" + id.description + "/"),
             let data = try? await URLSession.shared.data(from: url).0,
@@ -31,5 +31,5 @@ struct Pokemon: Hashable, Decodable, Identifiable, Sendable {
 }
 
 extension Pokemon {
-    static let sample: Self = .init(id: 1, name: "bulbasaur", sprites: .init(front_default: .init(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png")!))
+    public  static let sample: Self = .init(id: 1, name: "bulbasaur", sprites: .init(front_default: .init(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png")!))
 }

@@ -1,13 +1,14 @@
-import SwiftUI
+public import SwiftUI
+public import Pokemon
 
-struct PokemonCard: View {
-    let pokemon: Pokemon
+public struct PokemonCard: View {
+    private let pokemon: Pokemon
 
-    init(_ pokemon: Pokemon) {
+    public init(_ pokemon: Pokemon) {
         self.pokemon = pokemon
     }
 
-    var body: some View {
+    public  var body: some View {
         AsyncImage(url: pokemon.sprites.front_default) { imagePhase in
             switch imagePhase {
             case .empty:

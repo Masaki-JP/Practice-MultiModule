@@ -1,13 +1,14 @@
-import SwiftUI
+public import SwiftUI
+public import Pokemon
 
-struct PokemonDetailView: View {
-    init(_ pokemon: Pokemon) {
+public  struct PokemonDetailView: View {
+    public init(_ pokemon: Pokemon) {
         self.pokemon = pokemon
     }
 
     private let pokemon: Pokemon
 
-    var body: some View {
+    public var body: some View {
         VStack(alignment: .leading) {
             Text("PokemonDetailView")
                 .font(.headline)
