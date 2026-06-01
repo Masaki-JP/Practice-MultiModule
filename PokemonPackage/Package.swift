@@ -21,10 +21,6 @@ let package = Package(
             name: "PokemonLibrary",
             targets: ["RootView"],
         ),
-        .library(
-            name: "PokedexView",
-            targets: ["PokedexView"]
-        )
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
