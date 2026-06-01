@@ -34,7 +34,6 @@ public struct PokedexView<PokemonDetailViewBuilderType: PokemonDetailViewBuilder
     }
 }
 
-#if DEBUG
 #Preview {
     struct Builder: PokemonDetailViewBuilderProtocol {
         func build(_ pokemon: Pokemon) -> some View {
@@ -44,4 +43,3 @@ public struct PokedexView<PokemonDetailViewBuilderType: PokemonDetailViewBuilder
     
     return PokedexView([.sample], pokemonDetailViewBuilder: Builder())
 }
-#endif
